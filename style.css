@@ -1,17 +1,33 @@
-*{
-    margin:0;
-    padding:0;
-    position: relative;
-    font-family: "Manrope", sans-serif;
-}
-body{
-    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
 
 form {
     display: flex;
@@ -46,4 +62,71 @@ input:focus {
 
 .add-btn:hover {
     background-color: #e68a6f;
+}
+
+ul {
+    list-style: none;
+}
+
+.todo-item {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    border-left: 5px solid #fda085;
+}
+
+.todo-text {
+    font-size: 1.1rem;
+    color: #333;
+    word-break: break-all;
+}
+
+.todo-item.completed {
+    background: #e9ecef;
+    border-left-color: #28a745;
+    opacity: 0.7;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-check, .btn-delete {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.btn-check {
+    background-color: #28a745;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-check:hover { background-color: #218838; }
+.btn-delete:hover { background-color: #c82333; }
+
+#empty-msg {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
 }
