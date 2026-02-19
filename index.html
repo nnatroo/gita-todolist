@@ -1,26 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS To-Do List</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome აიკონებისთვის (სურვილისამებრ) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
 <div class="container">
-    <h1>To Do List</h1>
+    <header>
+        <h1>My Tasks 📝</h1>
+    </header>
+
+    <!-- ტასკის დამატების ფორმა -->
     <form id="todo-form">
-        <input id="todo-input" type="text" name="todo-input" placeholder="Enter Text...">
-        <button class="add-btn" type="submit">Add Task</button>
+        <input type="text" id="todo-input" placeholder="რა გაქვს გასაკეთებელი?" autocomplete="off">
+        <button type="submit" class="add-btn">
+            <i class="fas fa-plus"></i> დამატება
+        </button>
     </form>
 
-    <ul id="todo-list"></ul>
+    <!-- ტასკების სია -->
+    <ul id="todo-list">
+        <!-- აქ დაგენერირდება JavaScript-ით -->
+    </ul>
 
+    <!-- ცარიელი სტატუსი (გამოჩნდება თუ სია ცარიელია) -->
+    <p id="empty-msg" class="hidden">სია ცარიელია, დაისვენე! ☕</p>
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
